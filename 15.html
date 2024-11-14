@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <style>
+        .imgbox{
+            float: left;
+            text-align: center;
+            width: 120px;
+            border: 1px solid gray;
+            margin: 4px;
+            padding: 6px;
+        }
+        button{
+            width: 100%;
+        }
+    </style>
+    <div class="imgbox" id="imgbox1">Picture ni 1<br>
+    <img id="img1" src="1.jpg" alt="picture1" style="width: 100%;">
+    <button onclick="removeElement()">Remove</button>
+    </div>
+    <div class="imgbox" id="imgbox1">Picture ni 2<br>
+    <img id="img2" src="1.jpg" alt="picture1.5" style="width: 100%;">
+    <button onclick="removeElement1()">Remove</button>
+    </div>
+    <div class="imgbox" id="imgbox1">Picture ni 3<br>
+    <img id="img3" src="1.jpg" alt="picture1.6" style="width: 100%;">
+    <button onclick="removeElement2()">Remove</button>
+    </div>
+
+    <div class="imgbox" id="imgbox2">Picture ni 4<br>
+    <img id="img4" src="1.jpg" alt="picture2" style="width: 100%;">
+    <button onclick="changeVisibility()">Hide</button>
+    </div>
+    <div class="imgbox" id="imgbox2">Picture ni 5<br>
+    <img id="img5" src="1.jpg" alt="picture2.5" style="width: 100%;">
+    <button onclick="changeVisibility1()">Hide</button>
+    </div>
+    <div class="imgbox" id="imgbox2">Picture ni 6<br>
+    <img id="img6" src="1.jpg" alt="picture2.6" style="width: 100%;">
+    <button onclick="changeVisibility2()">Hide</button>
+    </div>
+
+
+    <div class="imgbox">Picture ni 3<br>
+    <img id="img7" src="1.jpg" alt="picture3" style="width: 100%;">
+    <button onclick="resetElement()">Reset all</button>
+    </div>
+
+    <script>
+        function removeElement() {
+            document.getElementById("img1").style.display = "none";
+        }
+        function removeElement1() {
+            document.getElementById("img2").style.display = "none";
+        }
+        function removeElement2() {
+            document.getElementById("img3").style.display = "none";
+        }
+
+        function changeVisibility(){
+            document.getElementById("img4").style.visibility = "hidden";
+        }
+        function changeVisibility1(){
+            document.getElementById("img5").style.visibility = "hidden";
+        }
+        function changeVisibility2(){
+            document.getElementById("img6").style.visibility = "hidden";
+        }
+
+
+        function resetElement(){
+            document.getElementById("img1").style.display = "block";
+            document.getElementById("img2").style.display = "block";
+            document.getElementById("img3").style.display = "block";
+            document.getElementById("img4").style.visibility = "visible";
+            document.getElementById("img5").style.visibility = "visible";
+            document.getElementById("img6").style.visibility = "visible";
+        }
+    </script>
+
+</body>
+</html>
